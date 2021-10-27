@@ -1,5 +1,7 @@
 package homeWorkAssessment.Task6;
 
+import java.util.Objects;
+
 public class Flower {
     private String madeIn;
     private int shelfLife;
@@ -42,6 +44,29 @@ public class Flower {
 
     public String getColor() {
         return color;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Flower flower = (Flower) o;
+        return shelfLife == flower.shelfLife && Double.compare(flower.price, price) == 0 && Objects.equals(madeIn, flower.madeIn) && Objects.equals(color, flower.color);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(madeIn, shelfLife, price, color);
+    }
+
+    @Override
+    public String toString() {
+        return "Flower{" +
+               "madeIn='" + madeIn + '\'' +
+               ", shelfLife=" + shelfLife +
+               ", price=" + price +
+               ", color='" + color + '\'' +
+               '}';
     }
 }
 
