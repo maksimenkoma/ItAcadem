@@ -4,14 +4,13 @@ public class Flower {
     private String madeIn;
     private int shelfLife;
     private double price;
-    static int count;
     private String color;
 
-    public Flower(String madeIn, int shelfLife, double price) {
+    public Flower(String madeIn, int shelfLife, double price, String color) {
         this.madeIn = madeIn;
         this.shelfLife = shelfLife;
         this.price = price;
-        count++;
+        this.color = color;
     }
 
     public Flower() {

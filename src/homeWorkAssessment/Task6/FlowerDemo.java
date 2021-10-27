@@ -12,6 +12,7 @@ package homeWorkAssessment.Task6;
 public class FlowerDemo {
 
     public static void main(String[] args) {
+
         double sumPrice = 0;
 
         Rose rose1 = new Rose("Turkish", 23, 1.2, "red", 55.5);
@@ -41,7 +42,7 @@ public class FlowerDemo {
             }
         }
         System.out.println();
-        System.out.println("Срок годности букета " + maxShelfLife+ " дней");
+        System.out.println("Срок годности букета " + maxShelfLife + " дней");
     }
 }
 
