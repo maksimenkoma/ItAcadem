@@ -12,171 +12,64 @@ public class Task2 {
 
         int count = 0;
         for (int i = 1; i < 100000; i++) {
-            if (i < 10) {
-                if (i == 4) {
-                    count++;
-                    System.out.println(i);
-                }
-            }
-            if (10 <= i & i < 100) {
-                if (i - (i / 10 * 10) == 4) {
-                    System.out.println(i);
-                }
-                if (i - (i / 10 * 10) == 3) {
-                    if (i / 10 == 1) {
-                        count++;
-                        System.out.println(i);
-                    }
-                }
 
+            if (i - (i / 10 * 10) == 4) {
+                ++count;
+                System.out.println(i);
+                continue;
             }
-            if (100 <= i & i < 1000) {
-                if (i - (i / 10 * 10) == 4) {
+
+            if ((i - (i / 100 * 100)) / 10 == 4) {
+                ++count;
+                System.out.println(i);
+                continue;
+            }
+            if (((i - (i / 1000 * 1000)) / 100) == 4) {
+                ++count;
+                System.out.println(i);
+                continue;
+            }
+            if (((i - (i / 10000 * 10000)) / 1000) == 4) {
+                ++count;
+                System.out.println(i);
+                continue;
+            }
+
+            if (i / 10000 == 4) {
+                ++count;
+                System.out.println(i);
+                continue;
+            }
+
+            if (i - (i / 10 * 10) == 3) {
+                if ((i - (i / 100 * 100)) / 10 == 1) {
                     ++count;
                     System.out.println(i);
                     continue;
                 }
-                if ((i - (i / 100 * 100)) / 10 == 4) {
+            }
+            if ((i - (i / 100 * 100)) / 10 == 3) {
+                if ((i - (i / 1000 * 1000)) / 100 == 1) {
                     ++count;
                     System.out.println(i);
                     continue;
                 }
-                if (i / 100 == 4) {
+            }
+            if ((i - (i / 1000 * 1000)) / 100 == 3) {
+                if (((i - (i / 10000 * 10000)) / 1000) == 1) {
                     ++count;
                     System.out.println(i);
                     continue;
                 }
-                if (i - (i / 10 * 10) == 3) {
-                    if ((i - (i / 100 * 100)) / 10 == 1) {
-                        ++count;
-                        System.out.println(i);
-                        continue;
-                    }
-
-                }
-                if ((i - (i / 100 * 100)) / 10 == 3) {
-                    if (i / 100 == 1) {
-                        ++count;
-                        System.out.println(i);
-                        continue;
-                    }
-
-                }
             }
 
-
-            if (1000 <= i & i < 10000) {
-                if (i - (i / 10 * 10) == 4) {
-                    count++;
+            if ((i - (i / 10000 * 10000)) / 1000 == 3) {
+                if ((i / 10000) == 1) {
+                    ++count;
                     System.out.println(i);
-                    continue;
                 }
 
-                if ((i - (i / 100 * 100)) / 10 == 4) {
-                    count++;
-                    System.out.println(i);
-                    continue;
-                }
-                if (((i - (i / 1000 * 1000)) / 100) == 4) {
-                    count++;
-                    System.out.println(i);
-                    continue;
-                }
-                if (i / 1000 == 4) {
-                    count++;
-                    System.out.println(i);
-                    continue;
-                }
-                if (i - (i / 10 * 10) == 3) {
-                    if ((i - (i / 100 * 100)) / 10 == 1) {
-                        count++;
-                        System.out.println(i);
-                        continue;
-                    }
-
-                }
-                if ((i - (i / 100 * 100)) / 10 == 3) {
-                    if ((i - (i / 1000 * 1000)) / 100 == 1) {
-                        count++;
-                        System.out.println(i);
-                    }
-
-                }
-                if ((i - (i / 1000 * 1000)) / 100 == 3) {
-                    if (i / 1000 == 1) {
-                        count++;
-                        System.out.println(i);
-                        continue;
-                    }
-
-                }
             }
-
-
-            if (10000 <= i) {
-                if (i - (i / 10 * 10) == 4) {
-                    count++;
-                    System.out.println(i);
-                    continue;
-                }
-
-                if ((i - (i / 100 * 100)) / 10 == 4) {
-                    count++;
-                    System.out.println(i);
-                    continue;
-                }
-                if (((i - (i / 1000 * 1000)) / 100) == 4) {
-                    count++;
-                    System.out.println(i);
-                    continue;
-                }
-                if (((i - (i / 10000 * 10000)) / 1000) == 4) {
-                    count++;
-                    System.out.println(i);
-                    continue;
-                }
-
-                if (i / 10000 == 4) {
-                    count++;
-                    System.out.println(i);
-                    continue;
-                }
-
-                if (i - (i / 10 * 10) == 3) {
-                    if ((i - (i / 100 * 100)) / 10 == 1) {
-                        count++;
-                        System.out.println(i);
-                        continue;
-                    }
-
-                }
-                if ((i - (i / 100 * 100)) / 10 == 3) {
-                    if ((i - (i / 1000 * 1000)) / 100 == 1) {
-                        count++;
-                        System.out.println(i);
-                        continue;
-                    }
-
-                }
-                if ((i - (i / 1000 * 1000)) / 100 == 3) {
-                    if (((i - (i / 10000 * 10000)) / 1000) == 1) {
-                        count++;
-                        System.out.println(i);
-                        continue;
-                    }
-
-                }
-
-                if ((i - (i / 10000 * 10000)) / 1000 == 3) {
-                    if ((i / 10000) == 1) {
-                        count++;
-                        System.out.println(i);
-                        continue;
-                    }
-
-                }
-            }
-
         }
         System.out.println("Суммарное число комбинаций " + count);
     }
