@@ -3,6 +3,7 @@ package homeWorkAssessment;
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class Task8<K> {
     private K[] ks;
 
@@ -13,10 +14,16 @@ public class Task8<K> {
     public static <K> Map<K, Integer> arrayToMap(K[] ks) {
 
         Map<K, Integer> maps = new HashMap<>();
-        int count = 1;
-        for (K i : ks) {
 
-            maps.put(i, count++);
+        for (int i = 0; i < ks.length; i++) {
+            int count = 1;
+            for (int j = i+1; j < ks.length; j++) {
+
+                if (ks[i].equals(ks[j])) {
+                    count++;
+                }
+            }
+            maps.putIfAbsent(ks[i], count);
         }
 
         for (Map.Entry<K, Integer> a : maps.entrySet()) {
@@ -28,12 +35,12 @@ public class Task8<K> {
 
     public static void main(String[] args) throws Exception {
 
-        Double[] array = {232.5, 22.5, 575.4, 242341.8};
+        Double[] array = {575.4, 22.5, 575.4, 223.5, 575.4, 22.5, 22.5, 4342.3};
         arrayToMap(array);
 
         System.out.println();
 
-        String[] array2 = {"ewqe", "dqdas", "adasdas", "sadasd"};
+        String[] array2 = {"ewqe", "dqdas", "ewqe", "sadasd"};
         arrayToMap(array2);
     }
 
