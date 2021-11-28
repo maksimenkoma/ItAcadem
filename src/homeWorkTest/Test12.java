@@ -7,6 +7,7 @@ import java.util.Arrays;
 public class Test12 {
     public static void main(String[] args) {
 
+
         String str = null;
 
         try
